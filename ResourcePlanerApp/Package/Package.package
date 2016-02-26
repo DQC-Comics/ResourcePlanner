@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="e9c41bdd-6df6-4cac-9bab-a409b2307aaf" 
+        solutionId="e9c41bdd-6df6-4cac-9bab-a409b2307aaf" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="ResourcePlanerApp"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="298b63c7-88fa-41d8-9815-bae96a1cdccf" />
+  </features>
+</package>
