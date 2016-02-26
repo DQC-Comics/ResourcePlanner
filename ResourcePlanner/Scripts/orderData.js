@@ -8,7 +8,7 @@ orderData.controller('orderDataController', function ($scope,orders) {
     
 });
 orderData.factory('orders', function ($resource) {
-    
-        return $resource("https://dqccomics-webapi.azurewebsites.net/api/Bookings/:id", { '$orderby': 'id asc' }, {});
-    
-})
+
+    return $resource("https://dqccomics-webapi.azurewebsites.net/api/Bookings/:id", { '$orderby': 'id asc' }, {});
+
+});
