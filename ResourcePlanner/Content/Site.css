@@ -37,3 +37,8 @@ hr{
 ._logo{
     padding-top: 15px; 
 }
+.heroInfoContainer{
+    background-color: white;
+    opacity: 0.4 !important;
+
+}

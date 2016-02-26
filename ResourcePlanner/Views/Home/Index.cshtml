@@ -7,12 +7,14 @@
 </div>
 <div data-ng-app="orderData">
     <div class="row" data-ng-controller="orderDataController">
-        <div class="col-lg-5" data-ng-repeat="order in orders | orderBy: Name">
-            <label for="order-{{order.Heroes.Id}}">{{order.Heroes.Name}}</label>
-            <label for="order-{{order.Location}}">{{order.Location}}</label>
-            <label for="order-{{order.StartTime}}">{{order.StartTime}}</label>
-            <label for="order-{{order.EndTime}}">{{order.EndTime}}</label>
-            <label for="order-{{order.Description}}">{{order.Description}}</label>
+        <div class="col-lg-4" data-ng-repeat="order in orders | orderBy: Name">
+            <div class="heroInfoContainer">
+                <label class="active" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label><br />
+                <label for="order-{{order.Location}}">{{order.Location}}</label><br />
+                <label for="order-{{order.StartTime}}">{{order.StartTime}}</label><br />
+                <label for="order-{{order.EndTime}}">{{order.EndTime}}</label><br />
+                <label for="order-{{order.Description}}">{{order.Description}}</label><br />
+            </div>
         </div>
     </div>
 </div>
