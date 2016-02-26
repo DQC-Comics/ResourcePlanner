@@ -1,26 +1,11 @@
-﻿@model IEnumerable<OrderData.Bookings>
-
-@{
-    ViewBag.Title = "View";
+﻿@{
+    ViewBag.Title = "Home Page";
 }
+@Scripts.Render("~/bundles/orderData")
+<div class="jumbotron">
 
-<h2>View</h2>
+</div>
 
+<div class="row">
 
-<table class="table">
-    <tr>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-    }
-
-</table>
+</div>
