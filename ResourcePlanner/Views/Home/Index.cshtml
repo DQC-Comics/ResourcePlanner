@@ -7,15 +7,15 @@
 </div>
 <div data-ng-app="orderData">
     <div class="row" data-ng-controller="orderDataController">
-        <div class="col-lg-4" data-ng-repeat="order in orders | orderBy: Name">
-            <div class="heroInfoContainer">
-                <label class="active" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label><br />
-                <label for="order-{{order.Location}}">{{order.Location}}</label><br />
-                <label for="order-{{order.StartTime}}">{{order.StartTime}}</label><br />
-                <label for="order-{{order.EndTime}}">{{order.EndTime}}</label><br />
-                <label for="order-{{order.Description}}">{{order.Description}}</label><br />
-                <button class="alert-success">Save</button>
+                <div class="col-lg-3" data-ng-repeat="order in orders">
+                    <div class="heroInfoContainer">
+                        <label class="active" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label><br />
+                        <a href="#" id="submitBtn" for="order-{{order.Location}}">Click for location</a>
+                        <p for="order-{{order.StartTime}}">{{order.StartTime | date:'yyyy-MM-dd'}}</p>
+                        <p for="order-{{order.EndTime}}">{{order.EndTime | date:'yyyy-MM-dd'}}</p>
+                        <p for="order-{{order.Description}}">{{order.Description}}</p>
+                        <button class="glyphicon glyphicon-floppy-save" ng-click="pushNotice($index)"></button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
