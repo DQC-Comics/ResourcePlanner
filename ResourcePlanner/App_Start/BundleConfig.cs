@@ -24,7 +24,8 @@
             bundles.Add(new ScriptBundle("~/bundles/orderData").Include(
                       "~/Scripts/orderData.js"));
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                      "~/Scripts/angular.js"));
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-resource.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

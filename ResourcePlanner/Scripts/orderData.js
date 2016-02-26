@@ -1,24 +1,14 @@
-﻿var orderData = angular.module('orderData');
-orderData.controller('orderDataController', function ($scope, orders) {
+﻿var orderData = angular.module('orderData', ['ngResource']);
+orderData.controller('orderDataController', function ($scope,orders) {
 
     $scope.orders = [];
+    orders.query(function (data) {
+        $scope.orders = data;
+    });
     
-    function populateOrders() {
-        var url = "https://dqccomics-webapi.azurewebsites.net/api/Bookings";
-        $.ajax({
-            url: url,
-            data: data,
-            headers: "application/json",
-            success: function (odata) {
-                console.log(odata)
-            },
-            fail: function (oData) {
-
-            }
-        })
-    }
-    $(document).ready(function () {
-        console.log("Test")
-        populateOrders
-    })
+});
+orderData.factory('orders', function ($resource) {
+    
+        return $resource("https://dqccomics-webapi.azurewebsites.net/api/Bookings/:id", { '$orderby': 'id asc' }, {});
+    
 })
