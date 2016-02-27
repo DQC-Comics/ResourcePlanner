@@ -38,6 +38,15 @@
 
             return this.View();
         }
+        public ActionResult AssaultReport()
+        {
+            return this.View();
+        }
+        public ActionResult Reporter()
+        {
+            return this.View();
+        }
+
         [HttpGet]
         public void SendMail(string subject, string body)
         {
