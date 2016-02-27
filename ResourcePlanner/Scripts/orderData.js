@@ -18,6 +18,20 @@ orderData.controller('orderDataController', function ($scope,orders) {
             console.log("Item  updated")
         })
     }
+    $scope.statusFilter = function (item) {
+        console.log(item)
+        if (item.Status != "Confirmed") {
+            return item;
+        }
+        
+    }
+    $scope.statusFilterFalse = function (item) {
+        console.log(item)
+        if(item.Status === "Confirmed")
+        {
+            return item;
+        }
+    }
     
 });
 orderData.factory('orders', function ($resource) {

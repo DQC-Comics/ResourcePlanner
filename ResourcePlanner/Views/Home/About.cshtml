@@ -1,7 +1,21 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>Use this area to provide additional information.</p>
+<script type="text/javascript" src="~/Scripts/orderData.js"></script>
+<div class="jumbotron">
+</div>
+<div data-ng-app="orderData">
+    <div class="row" data-ng-controller="orderDataController">
+        <div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg2" data-ng-repeat="order in orders| filter: statusFilterFalse">
+            <div class="heroInfoContainer">
+                <label class="active" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label>
+                <p for="order-{{order.Location}}">{{order.Location}}</p>
+                <p for="order-{{order.StartTime}}">{{order.StartTime | date:'yyyy-MM-dd'}}</p>
+                <p for="order-{{order.EndTime}}">{{order.EndTime | date:'yyyy-MM-dd'}}</p>
+                <p for="order-{{order.Description}}">{{order.Description}}</p>
+                <p for="order-{{order.Status}}">{{order.Status}}</p>
+                <button class="ms-Icon--save" ng-click="pushNotice($index)"></button>
+            </div>
+        </div>
+    </div>
+</div>
