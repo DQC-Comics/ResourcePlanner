@@ -2,12 +2,12 @@
 {
     using Microsoft.Ajax.Utilities;
     using Microsoft.SharePoint.Client.Utilities;
-    using ResourcePlannerAppWeb;
     using System.Collections.Generic;
     using System.Web.Mvc;
 
     public class HomeController : Controller
     {
+        SharePointContext spContext;
         public ActionResult Index()
         {
             return this.View();
@@ -21,6 +21,7 @@
         }
         public ActionResult Missions()
         {
+            spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
             return this.View();
         }
         public ActionResult Completed()
@@ -40,7 +41,6 @@
         [HttpGet]
         public void SendMail(string subject, string body)
         {
-            var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
             using (var clientContext = spContext.CreateUserClientContextForSPHost())
             {
                 var emailp = new EmailProperties();

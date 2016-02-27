@@ -188,6 +188,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\SharePointContextFilterAttribute.cs" />
     <Compile Include="OrderDataApi\Bookings.cs" />
     <Compile Include="OrderDataApi\BookingsExtensions.cs" />
     <Compile Include="OrderDataApi\Heroes.cs" />
