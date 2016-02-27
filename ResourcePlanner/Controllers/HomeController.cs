@@ -1,6 +1,5 @@
 ﻿namespace DQC.Comics.ResourcePlanner.Controllers
 {
-    using Microsoft.Ajax.Utilities;
     using Microsoft.SharePoint.Client.Utilities;
     using System.Collections.Generic;
     using System.Web.Mvc;
