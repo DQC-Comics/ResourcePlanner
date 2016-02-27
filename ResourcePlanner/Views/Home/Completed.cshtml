@@ -9,12 +9,12 @@
         <div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg2" data-ng-repeat="order in orders| filter: statusFilterFalse">
             <div class="heroInfoContainer">
                 <label class="active" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label>
-                <p for="order-{{order.Location}}">{{order.Country}}</p>
-                <p for="order-{{order.Location}}">{{order.City}}</p>
-                <p for="order-{{order.StartTime}}">{{order.StartTime | date:'yyyy-MM-dd'}}</p>
-                <p for="order-{{order.EndTime}}">{{order.EndTime | date:'yyyy-MM-dd'}}</p>
-                <p for="order-{{order.Description}}">{{order.Description}}</p>
-                <p for="order-{{order.Status}}">{{order.Status}}</p>
+                <p for="order-{{order.Country}}">Country: {{order.Country}}</p>
+                <p for="order-{{order.City}}">City: {{order.City}}</p>
+                <p for="order-{{order.StartTime}}">Start date: {{order.StartTime | date:'yyyy-MM-dd'}}</p>
+                <p for="order-{{order.EndTime}}">End date: {{order.EndTime | date:'yyyy-MM-dd'}}</p>
+                <p for="order-{{order.Description}}">Description: {{order.Description}}</p>
+                <p for="order-{{order.Status}}">Status: {{order.Status}}</p>
             </div>
         </div>
     </div>
