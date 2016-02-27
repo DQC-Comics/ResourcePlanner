@@ -5,17 +5,14 @@ orderData.controller('orderDataController', function ($scope,orders) {
     orders.query(function (data) {
         $scope.orders = data;
     });
-    $scope.openMap = function (coords) {
-        console.log("Coooords")
-       
-    
-    }
     $scope.pushNotice = function (orderIndex) {
         $scope.orders[orderIndex].Status = "Confirmed"
         $scope.orders[orderIndex].$update(function () {
-            console.log("Item  updated")
+
         })
     }
+   
+
     $scope.statusFilter = function (item) {
         if (item.Status != "Confirmed") {
             return item;
