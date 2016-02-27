@@ -11,22 +11,18 @@ orderData.controller('orderDataController', function ($scope,orders) {
     
     }
     $scope.pushNotice = function (orderIndex) {
-        console.log("Clicked")
-        console.log(orderIndex)
         $scope.orders[orderIndex].Status = "Confirmed"
         $scope.orders[orderIndex].$update(function () {
             console.log("Item  updated")
         })
     }
     $scope.statusFilter = function (item) {
-        console.log(item)
         if (item.Status != "Confirmed") {
             return item;
         }
         
     }
     $scope.statusFilterFalse = function (item) {
-        console.log(item)
         if(item.Status === "Confirmed")
         {
             return item;

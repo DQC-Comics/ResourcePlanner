@@ -14,14 +14,14 @@
             <i class="ms-Icon ms-Icon--menu ms-bgColor-themeDarker ms-borderColor-white"></i>
         </div>
         <ul class="ms-NavBar-items ms-fontColor-white">
-            <li class="ms-NavBar-item ms-borderColor-white--hover @( ViewBag.Current=="Missions"? "is-selected" : "")">@Html.ActionLink("Missions", "Index", "Home", new { @class = "ms-NavBar-link ms-font-l ms-fontColor-white" })</li>
-            <li class="ms-NavBar-item ms-borderColor-white--hover @( ViewBag.Current=="Approved Mission"? "is-selected" : "")">@Html.ActionLink("Approved Missions", "About", "Home", new { @class = "ms-NavBar-link ms-font-l ms-fontColor-white" })</li>
+            <li class="ms-NavBar-item ms-borderColor-white--hover @( ViewBag.Current=="Missions"? "is-selected" : "")">@Html.ActionLink("Missions", "Missions", "Home", new { @class = "ms-NavBar-link ms-font-l ms-fontColor-white" })</li>
+            <li class="ms-NavBar-item ms-borderColor-white--hover @( ViewBag.Current=="Approved Mission"? "is-selected" : "")">@Html.ActionLink("Approved Missions", "Completed", "Home", new { @class = "ms-NavBar-link ms-font-l ms-fontColor-white" })</li>
             <li class="ms-NavBar-item ms-borderColor-white--hover ms-NavBar-item--hasMenu @( ViewBag.Current=="Reports"? "is-selected" : "")">
-                <a class="ms-NavBar-link ms-font-l ms-fontColor-white" href="#">Contact</a>
+                <a class="ms-NavBar-link ms-font-l ms-fontColor-white" href="#">Reports</a>
                 <i class="ms-NavBar-chevronDown ms-Icon ms-Icon--chevronDown"></i>
                 <ul class="ms-ContextualMenu">
                     <li class="ms-ContextualMenu-item">
-                        @Html.ActionLink("Get in touch", "Contact", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
+                        @Html.ActionLink("Assault Report", "BiReport", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
                     </li>
                     <li class="ms-ContextualMenu-item"><a class="ms-ContextualMenu-link ms-font-m" href="#">Our locations</a></li>
                     <li class="ms-ContextualMenu-item"><a class="ms-ContextualMenu-link ms-font-m" href="#">Job vacancies</a></li>

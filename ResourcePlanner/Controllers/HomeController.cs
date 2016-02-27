@@ -15,7 +15,18 @@
 
             return this.View();
         }
-
+        public ActionResult Missions()
+        {
+            return this.View();
+        }
+        public ActionResult Completed()
+        {
+            return this.View();
+        }
+        public ActionResult BiReport()
+        {
+            return this.View();
+        }
         public ActionResult Contact()
         {
             this.ViewBag.Message = "Your contact page.";
