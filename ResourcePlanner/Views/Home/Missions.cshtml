@@ -9,14 +9,14 @@
     <div class="row" data-ng-controller="orderDataController">
                 <div class="ms-Grid-col ms-u-sm4 ms-u-md4 ms-u-lg2" data-ng-repeat="order in orders| filter: statusFilter">
                     <div class="heroInfoContainer">
-                        <label class="active" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label>
-                        <p for="order-{{order.Country}}">Country: {{order.Country}}</p>
-                        <p for="order-{{order.City}}">City: {{order.City}}</p>
-                        <p for="order-{{order.StartTime}}">Start date: {{order.StartTime | date:'yyyy-MM-dd'}}</p>
-                        <p for="order-{{order.EndTime}}">End date: {{order.EndTime | date:'yyyy-MM-dd'}}</p>
-                        <p for="order-{{order.Description}}">Description: {{order.Description}}</p>
-                        <p for="order-{{order.Status}}">Status: {{order.Status}}</p>
-                        <button class="ms-Icon ms-Icon--save" ng-click="pushNotice($index)"></button>
+                        <label class="active ms-font-xl ms-fontWeight-semibold" for="order-{{order.Heroes[0].Name}}">{{order.Heroes[0].Name}}</label>
+                        <p class="ms-font-s" for="order-{{order.Country}}">Country: {{order.Country}}</p>
+                        <p class="ms-font-s" for="order-{{order.City}}">City: {{order.City}}</p>
+                        <p class="ms-font-s" for="order-{{order.StartTime}}">Start date: {{order.StartTime | date:'yyyy-MM-dd'}}</p>
+                        <p class="ms-font-s" for="order-{{order.EndTime}}">End date: {{order.EndTime | date:'yyyy-MM-dd'}}</p>
+                        <p class="ms-font-s" for="order-{{order.Description}}">Description: {{order.Description}}</p>
+                        <p class="ms-font-s" for="order-{{order.Status}}">Status: {{order.Status}}</p>
+                        <button class="ms-Button ms-Button--command" ng-click="pushNotice($index)"> <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span> <span class="ms-Button-label">Approve</span> <span class="ms-Button-description">Approve this mission by clicking Approve</span> </button>
                     </div>
                 </div>
             </div>
