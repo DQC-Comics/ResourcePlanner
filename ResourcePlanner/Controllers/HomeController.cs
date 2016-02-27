@@ -21,7 +21,7 @@
         public ActionResult Missions()
         {
             spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
-            Session.Add("spcontext", spContext);
+            Session.Add("spContext", spContext);
             return this.View();
         }
         public ActionResult Completed()
@@ -50,7 +50,7 @@
         [HttpGet]
         public void SendMail(string subject, string body)
         {
-            var spContext = (SharePointContext)Session["spcontext"];
+            var spContext = (SharePointContext)Session["spContext"];
             using (var clientContext = spContext.CreateUserClientContextForSPHost())
             {
                 var emailp = new EmailProperties();
