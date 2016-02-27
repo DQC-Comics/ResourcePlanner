@@ -21,18 +21,20 @@
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
-            //bundles.Add(new ScriptBundle("~/bundles/orderData").Include(
-            //          "~/Scripts/orderData.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-resource.js"));
+            bundles.Add(new ScriptBundle("~/bundles/fabric").Include(
+                            "~/Scripts/fabric.*"));
 
             bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
                       "~/Scripts/jquery.signalR-2.2.0.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                    "~/Content/site.css",
+                    "~/Content/fabric.css",
+                    "~/Content/fabric.components.css"));
         }
     }
 }

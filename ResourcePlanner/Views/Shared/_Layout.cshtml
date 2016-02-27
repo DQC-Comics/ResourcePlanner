@@ -12,22 +12,33 @@
     <script type="text/javascript" src="https://dqccomics-webapi.azurewebsites.net/signalR/hubs"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <input class="_logo" type="image" src="~/Content/Images/760_405_csupload_56520634.jpg" height="60" width="200" alt="Submit" />
-            </div>
+    <div class="ms-NavBar ms-bgColor-themeDarker">
+        <div class="ms-NavBar-openMenu js-openMenu ms-bgColor-themeDarker">
+            <i class="ms-Icon ms-Icon--menu ms-bgColor-themeDarker ms-borderColor-white"></i>
         </div>
+        <ul class="ms-NavBar-items ms-fontColor-white">
+            <li class="ms-NavBar-item ms-borderColor-white--hover @( ViewBag.Current=="Missions"? "is-selected" : "")">@Html.ActionLink("Missions", "Index", "Home", new { @class = "ms-NavBar-link ms-font-l ms-fontColor-white" })</li>
+            <li class="ms-NavBar-item ms-borderColor-white--hover @( ViewBag.Current=="Approved Mission"? "is-selected" : "")">@Html.ActionLink("Approved Missions", "About", "Home", new { @class = "ms-NavBar-link ms-font-l ms-fontColor-white" })</li>
+            <li class="ms-NavBar-item ms-borderColor-white--hover ms-NavBar-item--hasMenu @( ViewBag.Current=="Reports"? "is-selected" : "")">
+                <a class="ms-NavBar-link ms-font-l ms-fontColor-white" href="#">Contact</a>
+                <i class="ms-NavBar-chevronDown ms-Icon ms-Icon--chevronDown"></i>
+                <ul class="ms-ContextualMenu">
+                    <li class="ms-ContextualMenu-item">
+                        @Html.ActionLink("Get in touch", "Contact", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
+                    </li>
+                    <li class="ms-ContextualMenu-item"><a class="ms-ContextualMenu-link ms-font-m" href="#">Our locations</a></li>
+                    <li class="ms-ContextualMenu-item"><a class="ms-ContextualMenu-link ms-font-m" href="#">Job vacancies</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Marvel Resource planner</p>
-        </footer>
     </div>
 
     
     @Scripts.Render("~/bundles/bootstrap")
-    
+    @Scripts.Render("~/bundles/fabric")
     @RenderSection("scripts", required: false)
 </body>
 </html>
