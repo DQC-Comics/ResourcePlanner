@@ -27,6 +27,9 @@
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-resource.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
+                      "~/Scripts/jquery.signalR-2.2.0.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
