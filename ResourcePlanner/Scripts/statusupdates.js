@@ -1,4 +1,8 @@
-﻿var resourceHubProxy = $.connection.bookingsHub;
+﻿$.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+    options.xhrFields = { withCredentials: true };
+});
+
+var resourceHubProxy = $.connection.bookingsHub;
 resourceHubProxy.client.bookingStatus = function (bookingId, status) {
 
     $('#statusUpdate')[0].innerText = '"Booking with id ' + bookingId + ' is now ' + status + '"';

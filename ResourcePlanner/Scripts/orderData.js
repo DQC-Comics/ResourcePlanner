@@ -8,7 +8,7 @@ orderData.controller('orderDataController', function ($scope,orders) {
     $scope.pushNotice = function (orderIndex) {
         $scope.orders[orderIndex].Status = "Confirmed"
         $scope.orders[orderIndex].$update(function () {
-            $.get("/Home/SendMail", { subject: "hej", body: "dig" });
+            $.get("/Home/SendMail", { subject: $scope.orders[orderIndex].City, body: $scope.orders[orderIndex].Description });
             console.log("Item  updated")
         })
     }
