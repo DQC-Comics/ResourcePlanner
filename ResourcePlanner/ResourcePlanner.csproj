@@ -1070,6 +1070,8 @@
     <Content Include="Views\Marvel\Index.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Home\BiReport.cshtml" />
+    <Content Include="Views\Home\Reporter.cshtml" />
+    <Content Include="Views\Home\AssaultReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

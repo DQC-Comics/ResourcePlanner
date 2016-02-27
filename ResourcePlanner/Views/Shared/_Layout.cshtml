@@ -27,10 +27,14 @@
                 <i class="ms-NavBar-chevronDown ms-Icon ms-Icon--chevronDown"></i>
                 <ul class="ms-ContextualMenu">
                     <li class="ms-ContextualMenu-item">
-                        @Html.ActionLink("Assault Report", "BiReport", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
+                        @Html.ActionLink("Assault Report", "AssaultReport", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
                     </li>
-                    <li class="ms-ContextualMenu-item"><a class="ms-ContextualMenu-link ms-font-m" href="#">Our locations</a></li>
-                    <li class="ms-ContextualMenu-item"><a class="ms-ContextualMenu-link ms-font-m" href="#">Job vacancies</a></li>
+                    <li class="ms-ContextualMenu-item">
+                        @Html.ActionLink("Hero 4 Hire", "BiReport", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
+                    </li>
+                    <li class="ms-ContextualMenu-item">
+                        @Html.ActionLink("Assault Report", "Reporter", "Home", new { @class = "ms-ContextualMenu-link ms-font-m" })
+                    </li>
                 </ul>
             </li>
         </ul>
