@@ -28,6 +28,9 @@
             bundles.Add(new ScriptBundle("~/bundles/fabric").Include(
                             "~/Scripts/fabric.*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
+                      "~/Scripts/jquery.signalR-2.2.0.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                     "~/Content/site.css",
                     "~/Content/fabric.css",
